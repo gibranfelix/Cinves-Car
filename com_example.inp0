@@ -626,7 +626,7 @@
 	</signalControllers>
 	<signalHeads>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="3 1" localNo="0" name="" no="1" pos="75.000000" sg="1 1" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="3 2" localNo="0" name="" no="2" pos="75.029527" sg="1 2" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="3 2" localNo="0" name="" no="2" pos="75.000000" sg="1 2" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="17 1" localNo="0" name="" no="3" pos="70.500000" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="17 2" localNo="0" name="" no="4" pos="70.500000" sg="1 4" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="8 1" localNo="0" name="" no="5" pos="18.000000" sg="1 6" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>

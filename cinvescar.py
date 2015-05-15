@@ -4,6 +4,21 @@ import win32com.client as com
 import os
 
 Vissim = []
+
+def DefaulValues():
+    global Vissim
+
+    random_seed = 42
+    Vissim.Simulation.SetAttValue('RandSeed', random_seed)
+
+    # Set maximum speed:
+    Vissim.Simulation.SetAttValue('UseMaxSimSpeed', True)
+
+    Vissim.Simulation.SetAttValue('SimSpeed', 100) # 10 => 10 Sim.sec. / s
+    # Or run the simulation continuous (it stops at breakpoint or end of simulation)
+    end_of_simulation = 8000 # Simulationsecond [s]
+    Vissim.Simulation.SetAttValue('SimPeriod', end_of_simulation)
+
 def Load(filename):
     global Vissim
     ## Connecting the COM Server => Open a new Vissim Window:
@@ -22,18 +37,43 @@ def Load(filename):
     ## Load a Layout:
     Filename = os.path.join(Path_of_COM_example_network, filename + '.layx')
     Vissim.LoadLayout(Filename)
+    DefaulValues()
     return Vissim
 
 def GetAllVehicles():
     # Method #2: Loop over all Vehicles using Object Enumeration
     for Vehicle in Vissim.Net.Vehicles:
-        veh_number =    Vehicle.AttValue('No')
-        veh_type =      Vehicle.AttValue('VehType')
-        veh_speed =     Vehicle.AttValue('Speed')
-        veh_position =  Vehicle.AttValue('Pos')
-        veh_linklane =  Vehicle.AttValue('Lane')
+        print Vehicle
+        veh_number = Vehicle.AttValue('No')
+        veh_type = Vehicle.AttValue('VehType')
+        veh_speed = Vehicle.AttValue('Speed')
+        veh_position = Vehicle.AttValue('Pos')
+        veh_linklane = Vehicle.AttValue('Lane')
         print '%s  |  %s  |  %.2f  |  %.2f  |  %s' % (veh_number, veh_type, veh_speed, veh_position, veh_linklane)
 
-def GetSteps(num):
+def GetVehicles(signal):
+    lstVehicle = []
+
+    signalhead = Vissim.Net.SignalHeads.ItemByKey(signal)
+    link_no = signalhead.Lane.Link.AttValue("No")
+
+    allVehicles = Vissim.Net.Links.ItemByKey(link_no).Vehs
+    for v in allVehicles:
+        if(signalhead.AttValue("Pos") > v.AttValue("Pos") and signalhead.AttValue("Pos") - 30 <= v.AttValue("Pos")):
+            lstVehicle.append(v)
+            print v
+    return lstVehicle
+
+
+def RunSteps(num):
+    global Vissim
     for i in range(num):
         Vissim.Simulation.RunSingleStep()
+    print Vissim.Simulation.SimulationSecond
+
+def RunSeconds(sec):
+    global Vissim
+    stoptime = sec + Vissim.Simulation.SimulationSecond
+    Vissim.Simulation.SetAttValue('SimBreakAt', stoptime)
+    Vissim.Simulation.RunContinuous()
+    print Vissim.Simulation.SimulationSecond
