@@ -1,0 +1,36 @@
+ExceptionCode = 3221225477
+ExceptionFlags = 0
+ExceptionAddress = 5D389358
+Simulation: Run 0 0 sec, The error occurred in line 518 of file netzwin.cpp in function long __cdecl main_eh(void *,struct XVT2DOTNET::s_event *).
+Information:
+not available
+Stack:
+not available
+Simulation: Run 0 0 sec, ExceptionCode = 3221225477
+ExceptionFlags = 0
+ExceptionAddress = 61BB9358
+Simulation: Run 0 0 sec, The error occurred in line 518 of file netzwin.cpp in function long __cdecl main_eh(void *,struct XVT2DOTNET::s_event *).
+Information:
+not available
+Stack:
+not available
+Simulation: Run 0 0 sec, ExceptionCode = 3221225477
+ExceptionFlags = 0
+ExceptionAddress = 633192FA
+Simulation: Run 0 0 sec, The error occurred in line 518 of file netzwin.cpp in function long __cdecl main_eh(void *,struct XVT2DOTNET::s_event *).
+Information:
+not available
+Stack:
+not availableThe error occurred in line 513 of file netzwin.cpp in function long __cdecl main_eh(void *,struct XVT2DOTNET::s_event *).
+Information:
+bad allocation
+Stack:
+not available
+Simulation: Run 0 0 sec, ExceptionCode = 3221225477
+ExceptionFlags = 0
+ExceptionAddress = 660A1B10The error occurred in line 513 of file netzwin.cpp in function long __cdecl main_eh(void *,struct XVT2DOTNET::s_event *).
+Information:
+bad allocation
+Stack:
+not available
+Simulation: Run 0 0 sec, 
