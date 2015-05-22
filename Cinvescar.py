@@ -68,3 +68,9 @@ def runseconds(sec):
     Vissim.Simulation.SetAttValue('SimBreakAt', stoptime)
     Vissim.Simulation.RunContinuous()
     #print Vissim.Simulation.SimulationSecond
+
+def RunSteps(num):
+    global Vissim
+    for i in range(num):
+         Vissim.Simulation.RunSingleStep()
+         print Vissim.Simulation.SimulationSecond
