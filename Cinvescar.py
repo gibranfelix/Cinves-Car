@@ -62,6 +62,20 @@ def getvehicles(signal):
                 #print v.AttValue("No")
     return lstvehicle
 
+def getvehicleswithdistance(signal, distance):
+    lstvehicle = []
+
+    signalhead = Vissim.Net.SignalHeads.ItemByKey(signal)
+    link_no = signalhead.Lane.Link.AttValue("No")
+
+    allvehicles = Vissim.Net.Links.ItemByKey(link_no).Vehs
+    for v in allvehicles:
+        if signalhead.AttValue("Pos") > v.AttValue("Pos"):
+            if signalhead.AttValue("Pos") - distance <= v.AttValue("Pos"):
+                lstvehicle.append(v)
+                #print v.AttValue("No")
+    return lstvehicle
+
 def runseconds(sec):
     global Vissim
     stoptime = sec + Vissim.Simulation.SimulationSecond
@@ -74,3 +88,18 @@ def RunSteps(num):
     for i in range(num):
          Vissim.Simulation.RunSingleStep()
          print Vissim.Simulation.SimulationSecond
+
+def waitforcars():
+    global Vissim
+    lanes = [(2, 6), (7, 3)]
+
+    totalprincipalcars = len(getvehicleswithdistance(lanes[0][0], -40)) + len(getvehicleswithdistance(lanes[0][1],-40))
+    totalsecundariacars = len(getvehicleswithdistance(lanes[1][0], -26)) + len(getvehicleswithdistance(lanes[1][1],-26))
+    totalcars = totalprincipalcars + totalsecundariacars
+    threshold = 0
+    while totalcars > 0:
+        runseconds(1)
+        threshold += 1
+        totalprincipalcars = len(getvehicleswithdistance(lanes[0][0], -40)) + len(getvehicleswithdistance(lanes[0][1],-40))
+        totalsecundariacars = len(getvehicleswithdistance(lanes[1][0], -26)) + len(getvehicleswithdistance(lanes[1][1],-26))
+        totalcars = totalprincipalcars + totalsecundariacars
