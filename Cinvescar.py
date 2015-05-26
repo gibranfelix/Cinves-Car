@@ -34,19 +34,21 @@ def load(filename):
 def defaultvalues():
     global Vissim
 
-    random_seed = 42
+    random_seed = 42 #42
     Vissim.Simulation.SetAttValue('RandSeed', random_seed)
 
     Sim_break_at = 60 # Simulationsecond [s]
     Vissim.Simulation.SetAttValue('SimBreakAt', Sim_break_at)
 
-    end_of_simulation = 8000  # Simulationsecond[s]
+    end_of_simulation = 1000  # Simulationsecond[s]
     Vissim.Simulation.SetAttValue('SimPeriod', end_of_simulation)
 
-    # Set maximum speed:
-    # Vissim.Simulation.SetAttValue('UseMaxSimSpeed', True)
+    Vissim.Simulation.SetAttValue('NumRuns', 1)
 
-    # Hint: to change the speed use: Vissim.Simulation.SetAttValue('SimSpeed', 10) # 10 => 10 Sim.sec. / s
+    # Set maximum speed:
+    Vissim.Simulation.SetAttValue('UseMaxSimSpeed', True)
+
+    Vissim.Simulation.SetAttValue('SimSpeed', 10) # 10 => 10 Sim.sec. / s
 
 def getvehicles(signal):
     lstvehicle = []

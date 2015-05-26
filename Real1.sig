@@ -31,12 +31,6 @@
         <pattern pattern="SECONDS" color="#00CC00" isBold="true" />
       </patterns>
     </display>
-    <display id="8" name="Flashing Red" state="FLASHING_RED">
-      <patterns>
-        <pattern pattern="FRAME" color="#FF0000" isBold="true" />
-        <pattern pattern="SECONDS" color="#FF0000" isBold="true" />
-      </patterns>
-    </display>
   </signaldisplays>
   <signalsequences>
     <signalsequence id="3" name="Red-Red/Amber-Green-Amber">
@@ -54,11 +48,6 @@
       <state display="1" isFixedDuration="false" isClosed="true" defaultDuration="1000" />
       <state display="3" isFixedDuration="false" isClosed="false" defaultDuration="5000" />
       <state display="4" isFixedDuration="true" isClosed="true" defaultDuration="3000" />
-    </signalsequence>
-    <signalsequence id="14" name="Red-Green-Flashing Red">
-      <state display="1" isFixedDuration="false" isClosed="true" defaultDuration="1000" />
-      <state display="3" isFixedDuration="false" isClosed="false" defaultDuration="5000" />
-      <state display="8" isFixedDuration="true" isClosed="true" defaultDuration="1000" />
     </signalsequence>
   </signalsequences>
   <sgs>
@@ -105,13 +94,13 @@
             <fixedstate display="4" duration="3000" />
           </fixedstates>
         </sg>
-        <sg sg_id="3" signal_sequence="14">
+        <sg sg_id="3" signal_sequence="7">
           <cmds>
+            <cmd display="1" begin="0" />
             <cmd display="3" begin="90000" />
-            <cmd display="1" begin="106000" />
           </cmds>
           <fixedstates>
-            <fixedstate display="8" duration="1000" />
+            <fixedstate display="4" duration="3000" />
           </fixedstates>
         </sg>
       </sgs>

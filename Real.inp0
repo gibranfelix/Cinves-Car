@@ -1757,22 +1757,22 @@
 	<vehicleInputs>
 		<vehicleInput anmFlag="false" link="1" name="" no="1">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="1200.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="1800.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="3" name="" no="4">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="400.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="600.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="2" name="" no="6">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="400.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="600.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 		<vehicleInput anmFlag="false" link="4" name="" no="7">
 			<timeIntVehVols>
-				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="1200.000000"/>
+				<timeIntervalVehVolume cont="false" timeInt="1 0" vehComp="1" volType="STOCHASTIC" volume="1800.000000"/>
 			</timeIntVehVols>
 		</vehicleInput>
 	</vehicleInputs>
@@ -2094,6 +2094,19 @@
 			</timeIntPedVols>
 		</pedestrianInput>
 	</pedestrianInputs>
+	<nodes>
+		<node anmConnNodeNo="0" anmConnZoneNo="0" anmZoneNo="0" hasUserDefOrient="false" name="" no="1" showClsfValues="true" useForDynAssign="false" useForEval="true">
+			<geometry>
+				<points>
+					<point x="588.260515" y="-245.441613"/>
+					<point x="587.897353" y="-257.789125"/>
+					<point x="685.224801" y="-259.423354"/>
+					<point x="685.224801" y="-246.894261"/>
+					<point x="591.165812" y="-245.441613"/>
+				</points>
+			</geometry>
+		</node>
+	</nodes>
 	<wttFiles>
 		<wttFile file="VISSIG.wtt" no="1"/>
 		<wttFile file="VISSIG.wtt" no="2"/>
@@ -2324,13 +2337,13 @@
 			</model2D3DSegs>
 		</model2D3D>
 	</models2D3D>
-	<simulation comment="" numCores="1" numRuns="1" randSeed="42" randSeedIncr="1" retroSync="false" simPeriod="3600" simRes="10" simSpeed="5.000000" startTm="0.000000" useAllCores="false" useMaxSimSpeed="false" volumeIncrDynAssign="0.000000"/>
+	<simulation comment="" numCores="1" numRuns="3" randSeed="42" randSeedIncr="1" retroSync="false" simPeriod="1000" simRes="10" simSpeed="5.000000" startTm="0.000000" useAllCores="true" useMaxSimSpeed="true" volumeIncrDynAssign="0.000000"/>
 	<dynamicAssignment altPathSearchEdgPenSpread="0.500000" altPathSearchNumPasses="5" avoidDetours="false" avoidDetoursFact="2.500000" chkConvgTravTmEdg="false" chkConvgTravTmPaths="false" chkConvgVolEdg="false" chkEdgOnReadingCostFile="true" chkEdgOnReadingPathFile="true" convgEdgLenMin="20.000000" convgTravTmEdgPerc="0.150000" convgTravTmPathsPerc="0.150000" convgVolEdg="15" correctOverlappingPaths="false" costFile="" createArchiveFiles="true" edgCostCalc="EXPSMOOTHING" evalInt="600" expSmoothingFact="0.200000" kirchExp="3.500000" logitLowerLimit="0.001000" logitScalingFact="1.500000" msaPreviousIterations="0" pathFile="" pathSelMethod="KIRCHHOFFEDGETT" pathsForZeroVols="false" pathsLimitMaxNumPaths="999" pathsLimitNumPaths="false" pathsRejectCostPerc="0.750000" pathsRejectHighCost="false" scaleTotVol="false" scaleTotVolPerc="1.000000" searchNewPaths="true" storeCosts="true" storePathsAndVols="true" tripChainFile="" useAltPathSearchForAllRels="false" useMatrices="false" useTripChains="false">
 		<routGuid2 interval="999999" offset="0" strategy="NEWROUTETODESTINATIONPARKINGLOT"/>
 		<routGuid1 interval="999999" offset="0" strategy="NEWROUTETODESTINATIONPARKINGLOT"/>
 	</dynamicAssignment>
 	<evaluation autoCreateResultColumns="true" databaseConnection="" evalOutDir="#data#" keepPrevResults="KEEPALL" listAutoExportType="FILE" nodesDelaySegmentStart="100.000000" queueBeginSpeed="5.000000" queueConsiderAdjacentLanes="true" queueEndSpeed="10.000000" queueMaxHeadway="20.000000" queueMaxLength="500.000000">
-		<vehTravTms aggrBySect="DESTINATION" collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<vehTravTms aggrBySect="DESTINATION" collectData="true" fromTime="60" interval="99999" toTime="99999"/>
 		<nodeRawData fromTime="0" toTime="99999" writeDatabase="false" writeFile="false"/>
 		<vehTravTmRawData fromTime="0" toTime="99999" writeDatabase="false" writeFile="false"/>
 		<dataCollRawData fromTime="0" toTime="99999" writeFile="false"/>
@@ -2342,12 +2355,12 @@
 		<scDetRec writeFile="false"/>
 		<sigChgs writeDatabase="false" writeFile="false"/>
 		<ssam writeFile="false"/>
-		<nodeResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<linkResults collectData="false" fromTime="0" interval="99999" perLane="false" toTime="99999"/>
-		<delays collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<dataColl collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<queues collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<vehNetPerf collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<nodeResults collectData="true" fromTime="60" interval="99999" toTime="99999"/>
+		<linkResults collectData="true" fromTime="60" interval="99999" perLane="false" toTime="99999"/>
+		<delays collectData="true" fromTime="60" interval="99999" toTime="99999"/>
+		<dataColl collectData="true" fromTime="60" interval="99999" toTime="99999"/>
+		<queues collectData="true" fromTime="60" interval="99999" toTime="99999"/>
+		<vehNetPerf collectData="true" fromTime="60" interval="99999" toTime="99999"/>
 		<pedRec filterType="ALL" fromTime="0" resolution="1" toTime="99999" writeDatabase="false" writeFile="false">
 			<attributes>
 				<attributeSelection attributeID="SIMSEC" decimals="2" format="DEFAULT" showUnits="false"/>
@@ -2366,14 +2379,14 @@
 				<attributeSelection attributeID="POSLAT" decimals="2" format="DEFAULT" showUnits="false"/>
 			</attributes>
 		</vehRec>
-		<areaResults cellSize="1.000000" collectData="false" collectGridData="true" fromTime="0" interval="99999" rangeOfInfluence="1" toTime="99999"/>
-		<pedTravTms collectData="false" fromTime="0" interval="99999" toTime="99999"/>
-		<areaMeasResults collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<areaResults cellSize="1.000000" collectData="true" collectGridData="true" fromTime="60" interval="99999" rangeOfInfluence="1" toTime="99999"/>
+		<pedTravTms collectData="true" fromTime="60" interval="99999" toTime="99999"/>
+		<areaMeasResults collectData="true" fromTime="60" interval="99999" toTime="99999"/>
 		<pedTravTmRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<pedTravTmODData fromTime="0" interval="99999" toTime="99999" writeFile="false"/>
 		<areaMeasRawData fromTime="0" toTime="99999" writeFile="false"/>
 		<dischRec fromTime="0" toTime="99999" writeFile="false"/>
-		<pedNetPerf collectData="false" fromTime="0" interval="99999" toTime="99999"/>
+		<pedNetPerf collectData="true" fromTime="60" interval="99999" toTime="99999"/>
 	</evaluation>
 	<pedestrianRoutingDecisionsStatic>
 		<pedestrianRoutingDecisionStatic allPedTypes="true" name="" no="1">
