@@ -181,6 +181,20 @@
 				</points3D>
 			</geometry>
 		</link>
+		<link costPerKm="0.000000" direction="ALL" displayType="1" emergStopDist="5.000000" gradient="0.000000" isPedArea="false" linkBehavType="1" linkEvalAct="true" linkEvalSegLen="10.000000" lnChgDist="200.000000" lnChgDistIsPerLn="false" lnChgEvalAct="true" name="" no="10003" onlyOvtBus="false" showClsfValues="true" showVeh="true" surch1="0.000000" surch2="0.000000" thickness="0.000000" vehRecAct="true">
+			<lanes>
+				<lane/>
+			</lanes>
+			<fromLinkEndPt lane="1 1" pos="555.069245"/>
+			<toLinkEndPt lane="2 1" pos="331.405602"/>
+			<geometry>
+				<points3D>
+					<point3D x="686.498346" y="-254.657298" zOffset="0.000000"/>
+					<point3D x="690.136306" y="-254.747974" zOffset="0.000000"/>
+					<point3D x="690.088803" y="-262.838660" zOffset="0.000000"/>
+				</points3D>
+			</geometry>
+		</link>
 	</links>
 	<vehicleClasses>
 		<vehicleClass anmid="" color="ff000000" name="Car" no="10" useVehTypeColor="true">
@@ -220,7 +234,6 @@
 			<sGs>
 				<signalGroup amber="3.000000" greenFlsh="0.000000" minGreen="5.000000" minRed="0.000000" name="Primaria" no="1" redAmber="0.000000" type="NORMAL"/>
 				<signalGroup amber="3.000000" greenFlsh="0.000000" minGreen="5.000000" minRed="0.000000" name="Secundaria" no="2" redAmber="0.000000" type="NORMAL"/>
-				<signalGroup amber="3.000000" greenFlsh="0.000000" minGreen="5.000000" minRed="0.000000" name="Peatones" no="3" redAmber="0.000000" type="NORMAL"/>
 			</sGs>
 			<wttFiles>
 				<intObjectRef key="1"/>
@@ -228,35 +241,18 @@
 			<sigTmsTabConfig>
 				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 1" title="" varNo="1" wttFilename="vissim"/>
 				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 2" title="" varNo="2" wttFilename="vissim"/>
-				<signalOutputConfigurationElement configName="SIGGRP" detPort="0" sg="1 3" title="" varNo="3" wttFilename="vissim"/>
 			</sigTmsTabConfig>
 		</signalController>
 	</signalControllers>
 	<signalHeads>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="1 2" localNo="0" name="" no="1" pos="554.683187" sg="1 1" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="1 1" localNo="0" name="" no="2" pos="554.634028" sg="1 1" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="1 2" localNo="0" name="" no="1" pos="554.510869" sg="1 1" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
+		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="1 1" localNo="0" name="" no="2" pos="554.517161" sg="1 1" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="2 1" localNo="0" name="" no="3" pos="300.607743" sg="1 2" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="2 2" localNo="0" name="" no="4" pos="300.765809" sg="1 2" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="4 2" localNo="0" name="" no="5" pos="590.990265" sg="1 1" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="4 1" localNo="0" name="" no="6" pos="590.999228" sg="1 1" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="3 2" localNo="0" name="" no="7" pos="376.554278" sg="1 2" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="3 1" localNo="0" name="" no="8" pos="376.570934" sg="1 2" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="7 1" localNo="0" name="" no="9" pos="3.225550" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="" no="15" pos="40.710063" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="13 1" localNo="0" name="" no="16" pos="3.501697" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="8 1" localNo="0" name="" no="18" pos="3.935757" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="13 1" localNo="0" name="" no="19" pos="11.033251" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="13 1" localNo="0" name="" no="20" pos="32.688774" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="13 1" localNo="0" name="" no="21" pos="40.372916" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="7 1" localNo="0" name="" no="22" pos="17.427214" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="7 1" localNo="0" name="" no="23" pos="10.829461" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="" no="24" pos="33.223909" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="" no="25" pos="11.139998" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="11 1" localNo="0" name="" no="26" pos="3.927847" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="" no="27" pos="3.782334" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="" no="28" pos="11.233029" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="" no="29" pos="17.664462" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
-		<signalHead allPedTypes="true" allVehTypes="true" complRate="1.000000" dischRecAct="false" isBlockSig="false" lane="9 1" localNo="0" name="" no="30" pos="25.153281" sg="1 3" slowDownDist="3.000000" type="CIRCULAR" vAmberBlock="0.000000"/>
 	</signalHeads>
 	<netPara concatMaxLen="255" concatSeparator="," drivSimActive="false" leftHandTraffic="false" pedDefCellSize="0.150000" pedDefObstDist="0.500000" pedDirChgAngle="4.000000" pedDirChgClip="true" pedNbhSearGridSize="5.000000" pedNeverWalkBack="false" pedQueueOrder="0.700000" pedQueueStraight="0.600000" sig3DColArrow="false" unitAccel="METRIC" unitLenLong="METRIC" unitLenShort="METRIC" unitLenVeryShort="METRIC" unitSpeed="METRIC" unitSpeedSmall="METRIC" useGradFromZCoord="false">
 		<refPointMap x="-13701189.923061" y="-4512120.542910"/>
@@ -2034,7 +2030,7 @@
 				<coordOnArea x="31.043401" y="25.503912"/>
 			</location>
 			<timeIntPedVols>
-				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="30.000000"/>
+				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="0.000000"/>
 			</timeIntPedVols>
 		</pedestrianInput>
 		<pedestrianInput name="" no="2">
@@ -2042,7 +2038,7 @@
 				<coordOnArea x="15.896290" y="-18.351865"/>
 			</location>
 			<timeIntPedVols>
-				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="30.000000"/>
+				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="0.000000"/>
 			</timeIntPedVols>
 		</pedestrianInput>
 		<pedestrianInput name="" no="3">
@@ -2050,7 +2046,7 @@
 				<coordOnArea x="-19.061132" y="28.113310"/>
 			</location>
 			<timeIntPedVols>
-				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="30.000000"/>
+				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="0.000000"/>
 			</timeIntPedVols>
 		</pedestrianInput>
 		<pedestrianInput name="" no="4">
@@ -2058,7 +2054,7 @@
 				<coordOnArea x="-15.138978" y="31.744935"/>
 			</location>
 			<timeIntPedVols>
-				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="30.000000"/>
+				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="0.000000"/>
 			</timeIntPedVols>
 		</pedestrianInput>
 		<pedestrianInput name="" no="5">
@@ -2066,7 +2062,7 @@
 				<coordOnArea x="-6.775617" y="-36.588410"/>
 			</location>
 			<timeIntPedVols>
-				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="30.000000"/>
+				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="0.000000"/>
 			</timeIntPedVols>
 		</pedestrianInput>
 		<pedestrianInput name="" no="6">
@@ -2074,7 +2070,7 @@
 				<coordOnArea x="-17.670491" y="-27.146187"/>
 			</location>
 			<timeIntPedVols>
-				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="30.000000"/>
+				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="0.000000"/>
 			</timeIntPedVols>
 		</pedestrianInput>
 		<pedestrianInput name="" no="7">
@@ -2082,7 +2078,7 @@
 				<coordOnArea x="24.651742" y="30.733452"/>
 			</location>
 			<timeIntPedVols>
-				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="30.000000"/>
+				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="0.000000"/>
 			</timeIntPedVols>
 		</pedestrianInput>
 		<pedestrianInput name="" no="8">
@@ -2090,23 +2086,10 @@
 				<coordOnArea x="29.693696" y="-10.195826"/>
 			</location>
 			<timeIntPedVols>
-				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="30.000000"/>
+				<timeIntervalPedVolume cont="false" pedComp="1" timeInt="5 0" volType="STOCHASTIC" volume="0.000000"/>
 			</timeIntPedVols>
 		</pedestrianInput>
 	</pedestrianInputs>
-	<nodes>
-		<node anmConnNodeNo="0" anmConnZoneNo="0" anmZoneNo="0" hasUserDefOrient="false" name="" no="1" showClsfValues="true" useForDynAssign="false" useForEval="true">
-			<geometry>
-				<points>
-					<point x="588.260515" y="-245.441613"/>
-					<point x="587.897353" y="-257.789125"/>
-					<point x="685.224801" y="-259.423354"/>
-					<point x="685.224801" y="-246.894261"/>
-					<point x="591.165812" y="-245.441613"/>
-				</points>
-			</geometry>
-		</node>
-	</nodes>
 	<wttFiles>
 		<wttFile file="VISSIG.wtt" no="1"/>
 		<wttFile file="VISSIG.wtt" no="2"/>
@@ -2150,6 +2133,12 @@
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="3" link2="14" no="37" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="13" link2="10001" no="38" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="14" link2="10001" no="39" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="1" link2="10003" no="40" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="2" link2="10003" no="41" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="9" link2="10003" no="42" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="10" link2="10003" no="43" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="13" link2="10003" no="44" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
+		<conflictArea addStopDist="0.000000" anticipRout="0.000000" avoidBlock="1.000000" frontGapDef="0.500000" link1="14" link2="10003" no="45" obsAdjLns="false" rearGapDef="0.500000" safDistFactDef="1.500000" status="PASSIVE" visibLink1="100.000000" visibLink2="100.000000"/>
 	</conflictAreas>
 	<occupancyDistributions>
 		<occupancyDistribution mean="1.000000" name="Single Occupancy" no="1" stdDev="0.000000" type="NORMAL"/>
@@ -2183,6 +2172,16 @@
 					</linkSeq>
 				</vehicleRouteStatic>
 				<vehicleRouteStatic destLink="4" destPos="714.654875" name="" no="2" relFlow="2 0:0.700000"/>
+			</vehRoutSta>
+		</vehicleRoutingDecisionStatic>
+		<vehicleRoutingDecisionStatic allVehTypes="true" anmFlag="false" combineStaRoutDec="false" link="1" name="" no="4" pos="461.586426">
+			<vehRoutSta>
+				<vehicleRouteStatic destLink="1" destPos="671.316912" name="" no="1" relFlow="2 0:0.800000"/>
+				<vehicleRouteStatic destLink="2" destPos="363.671704" name="" no="2" relFlow="2 0:0.200000">
+					<linkSeq>
+						<intObjectRef key="10003"/>
+					</linkSeq>
+				</vehicleRouteStatic>
 			</vehRoutSta>
 		</vehicleRoutingDecisionStatic>
 	</vehicleRoutingDecisionsStatic>
@@ -2761,7 +2760,7 @@
 			<pos x="631.555327" y="-301.584307" zOffset="0.000000"/>
 		</static3DModel>
 		<static3DModel level="1" modelFilename="#3dmodels#Static\House.v3d" no="446" pitchAngle="0.000000" rollAngle="0.000000" scale="1.000000" yawAngle="0.000000">
-			<pos x="559.555540" y="-301.776673" zOffset="0.000000"/>
+			<pos x="558.136938" y="-298.939469" zOffset="0.000000"/>
 		</static3DModel>
 		<static3DModel level="1" modelFilename="#3dmodels#Static\House.v3d" no="447" pitchAngle="0.000000" rollAngle="0.000000" scale="1.000000" yawAngle="0.000000">
 			<pos x="561.266460" y="-201.802146" zOffset="0.000000"/>
